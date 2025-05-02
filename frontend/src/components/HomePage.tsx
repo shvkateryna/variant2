@@ -87,7 +87,7 @@ export default function HomePage() {
     setError(null);
 
     try {
-      const response = await fetch("https://backend-production-1a2a.up.railway.app/analyze", {
+      const response = await fetch("https://backend-production-1a2a.up.railway.app/analyze/", {
         method: "POST",
         body: formData,
       });
