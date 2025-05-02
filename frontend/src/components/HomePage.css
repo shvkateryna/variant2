@@ -147,7 +147,7 @@
     display: flex;
     justify-content: stretch;
     align-items: flex-end;
-    height: 3rem;
+    height: 4rem;
     z-index: 999;
     border-top: 1px solid #ccc;
     background-color: white;
@@ -197,7 +197,7 @@
     }
   
     .color-palette-bottom {
-      height: 15rem; /* вища палітра тільки на ноуті */
+      height: 5rem; /* вища палітра тільки на ноуті */
     }
   
     .color-block {
