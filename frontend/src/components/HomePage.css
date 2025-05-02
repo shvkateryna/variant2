@@ -224,7 +224,7 @@
 
     .recommendation-block {
       flex-direction: column;
-      gap: 4rem;
+      gap: 5rem;
     }
 
     .recommendation-image {
