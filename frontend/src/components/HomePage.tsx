@@ -151,12 +151,12 @@ export default function HomePage() {
             <div className="recommendation-block">
               <div className="recommendation-image">
                 <a href={links[0]} target="_blank" rel="noopener noreferrer">
-                  <img src="frontend/public/recommendation1.png" alt="Recommendation 1" />
+                  <img src="https://variant2-production-5775.up.railway.app/recommendation1.png" alt="Recommendation 1" />
                 </a>
               </div>
               <div className="recommendation-image">
                 <a href={links[1]} target="_blank" rel="noopener noreferrer">
-                  <img src="frontend/public/recommendation2.png" alt="Recommendation 2" />
+                  <img src="https://variant2-production-5775.up.railway.app/recommendation2.png" alt="Recommendation 2" />
                 </a>
               </div>
             </div>
