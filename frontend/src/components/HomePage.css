@@ -1,0 +1,237 @@
+.homepage {
+    min-height: 100vh;
+    background-color: #fff0f3;
+    padding-top: 5.5rem;
+    padding-bottom: 6rem; /* зменшено, щоб ближче до палітри */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .homepage-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff0f3;
+    padding: 1.25rem 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .homepage-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #e60023;
+    letter-spacing: 1px;
+  }
+  
+  .homepage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1280px;
+  }
+  
+  .upload-card {
+    background-color: white;
+    border: 2px solid #e60023;
+    border-radius: 20px;
+    padding: 3rem;
+    width: 75%;
+    max-width: 540px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .preview-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-placeholder {
+    font-size: 4rem;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    background-color: #e60023;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c4001d;
+    transform: scale(1.03);
+  }
+  
+  .result {
+    color: #e60023;
+    font-weight: 900;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    animation: boom-pop 0.8s ease-in-out;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border: 2px dashed #e60023;
+    padding: 1rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #fff5f7, #ffe9ee);
+  }
+  
+  .error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+  
+  /* margin-top: 2rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+  } */
+  
+  .recommendation-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recommendation-image img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    opacity: 0.95;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .recommendation-image img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  .color-palette-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-end;
+    height: 6rem;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .color-block {
+    flex: 1;
+    height: 100%;
+    margin: 0;
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .color-block:hover {
+    transform: scaleY(1.08);
+    z-index: 1;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    .content-wrapper {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  
+    .upload-card {
+      max-width: 540px;
+      padding: 3rem;
+      border: 2px solid #e60023;
+    }
+  
+    .recommendation-block {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .recommendation-image img {
+      width: 300px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      margin-top: 4rem;
+    }
+  
+    .color-palette-bottom {
+      height: 15rem; /* вища палітра тільки на ноуті */
+    }
+  
+    .color-block {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  
+  @keyframes boom-pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  @media (max-width: 480px) {
+    .upload-card {
+      width: 92%;
+      max-width: none;
+      padding: 1.25rem;
+    }
+  
+    .btn {
+      font-size: 0.95rem;
+    }
+
+    .recommendation-image {
+        display: flex;
+        justify-content: center; /* Changed from flex-end to center */
+        align-items: center;
+        width: 100%;
+      }
+    
+      .recommendation-image img {
+        width: 180px;
+        display: block;
+        margin: 0 auto; /* Added auto margins for horizontal centering */
+      }
+  }
